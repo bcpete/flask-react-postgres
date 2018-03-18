@@ -1,7 +1,5 @@
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
-if os.environ['APP_SETTINGS'] == 'confir.DevelopmentConfig':
-    from secretkey import SECRET
 
 
 class Config(object):
@@ -9,7 +7,7 @@ class Config(object):
     TESTING = False
     CSRF_ENABLED = True
     if os.environ['APP_SETTINGS'] == 'config.DevelopmentConfig':
-        SECRET_KEY = SECRET
+        SECRET_KEY = 'THIS IS NOT A GAME WE HIDDEN OUT HERE'
     else:
         SECRET_KEY = os.environ['SECRET_KEY']
     SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
