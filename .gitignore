@@ -1,6 +1,7 @@
 node_modules/
 *.log
 server/config/config.json
+secretkey.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
