@@ -1,6 +1,7 @@
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
-from secretkey import SECRET
+if os.environ['APP_SETTINGS'] == 'confir.DevelopmentConfig':
+    from secretkey import SECRET
 
 
 class Config(object):
