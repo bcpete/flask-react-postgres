@@ -1,1 +1,1 @@
-web: gunicorn python3.6 server/app.py
+web: gunicorn python server/app.py
